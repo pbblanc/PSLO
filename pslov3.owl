@@ -1,0 +1,1826 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/pslo#"
+     xml:base="http://example.org/pslo"
+     xmlns:pslo="http://example.org/pslo.owl#"
+     xmlns:Ontology1202459344="http://www.owl-ontologies.com/Ontology1202459344.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/pslo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#hasForeignKeys -->
+
+    <owl:AnnotationProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#hasForeignKeys"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#hasOrigColumnName -->
+
+    <owl:AnnotationProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#hasOrigColumnName"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#hasPrimaryKeyFields -->
+
+    <owl:AnnotationProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#hasPrimaryKeyFields"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#isBridgeTable -->
+
+    <owl:AnnotationProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#isBridgeTable"/>
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrl#argument1 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/11/swrl#argument1"/>
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrl#argument2 -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/11/swrl#argument2"/>
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrl#arguments -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/11/swrl#arguments"/>
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrl#builtin -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/11/swrl#builtin"/>
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrl#classPredicate -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/11/swrl#classPredicate"/>
+    
+
+
+    <!-- http://www.w3.org/2003/11/swrl#propertyPredicate -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/11/swrl#propertyPredicate"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/pslo#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo#hasRole">
+        <owl:inverseOf rdf:resource="http://example.org/pslo#rolePlayBy"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo#rolePlayBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo#rolePlayBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Role"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#compose -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#compose">
+        <owl:inverseOf rdf:resource="http://example.org/pslo.owl#composed_by"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:comment>What makes the car. Here a battery or a structure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#composed_by -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#composed_by">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:comment>Into what is embedded the the battery or the structure. Here a car.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#hasPost -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#hasPost">
+        <owl:inverseOf rdf:resource="http://example.org/pslo.owl#postIn"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Post"/>
+        <rdfs:comment>Who is employed by a company (i.e. center). Here technicians.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#inDecommision -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#inDecommision">
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#Decommissioning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#inProvision -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#inProvision">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#Provisioning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#inService_Design -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#inService_Design">
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#Service_Design"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#inService_Offering -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#inService_Offering">
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#Service_Offering"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#inService_Usage -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#inService_Usage">
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#Service_Usage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#manufacture -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#manufacture">
+        <owl:inverseOf rdf:resource="http://example.org/pslo.owl#manufactured_by"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:comment>What is manufactured by the product provider. Here a battery or a structure.
+
+This Object Property is not used but would be if we add manufacturers to the model.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#manufactured_by -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#manufactured_by">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>Who manufactured the parts of the car (battery and structure). Here a product provider.
+
+This Object Property is not used but would be if we add manufacturers to the model.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#own -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#own">
+        <owl:inverseOf rdf:resource="http://example.org/pslo.owl#owned_by"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#client"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:comment>What the client owns. Here a car.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#owned_by -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#owned_by">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#client"/>
+        <rdfs:comment>By whom is owned the car. Here a client.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#perform -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#perform">
+        <owl:inverseOf rdf:resource="http://example.org/pslo.owl#performed_by"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+        <rdfs:comment>What is performed by the technicians. Here the services.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#performed_by -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#performed_by">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>By whom the service is performed. Here the technicians.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#performed_for -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#performed_for">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#client"/>
+        <rdfs:comment>For whom the service is performed. Here the clients.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#performed_in -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#performed_in">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+        <rdfs:comment>Where the service is performed. Here the centers.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#performed_on -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#performed_on">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:comment>On what the service is performed. Here usually on the battery or the structure.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#postIn -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#postIn">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Post"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment>Who employs a technician. Here a company (i.e a center).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#recycled_by -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#recycled_by">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:comment>The service that did recycle the battery. Here the battery recycling service.
+
+This Object Property is not really needed since we can retrieve the same information and create the same link using the Object Property &quot;performed_on&quot; and limiting the search to battery recycling services. We keep it though to make things easier to understand.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#store -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#store">
+        <owl:inverseOf rdf:resource="http://example.org/pslo.owl#stored_by"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:comment>What is store by the center. Here batteries.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#stored_by -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/pslo.owl#stored_by">
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#car"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>Where are store the parts(e.g batteries). Here in the store center.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#basedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#basedAt">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <rdfs:comment xml:lang="it">Indica la sede in cui una è stabilita una persona. Non esclude la possibilità che una persona sia allocata su più sedi.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the site at which a person is based. We do not restrict the possibility that a person is based at multiple sites.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique le site sur lequel une personne est basée. Nous ne limitons pas le nombre de sites sur lesquels une personne peut être basée.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Lugar en el que trabaja una persona. No se restringe el hecho de que una persona pueda estar adscrita a múltiples ubicaciones.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">人が基礎としているサイトを示します。人が複数のサイトを基礎としている可能性を制限しません。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="it">basata a</rdfs:label>
+        <rdfs:label xml:lang="en">based At</rdfs:label>
+        <rdfs:label xml:lang="fr">basé à</rdfs:label>
+        <rdfs:label xml:lang="es">trabaja en la sede</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasMember">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#memberOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="it">Indica una persona che è membro della data Organization. È l&apos;inverso di `org:memberOf` ed è fornita per  compatibilità con `foaf:member`.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a person who is a member of the subject Organization. Inverse of `org:memberOf`, see that property for further clarification. Provided for compatibility with `foaf:member`.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique une personne membre de l&apos;Organisation sujet. Inverse de `org:memberOf`, voyez la description de cette propriété pour plus de précisions. Fourni pour la compatibilité avec `foaf:member`.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Persona que es miembro de la organización en cuestión. Es la relación inversa de `org:memberOf`, véase la descripción de esa propiedad para más detalles. Se prevé compatibilidad con foaf:member`.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">対象組織のメンバーであるエージェント（人または他の組織）を示します。org:memberOfの逆。さらに明確な説明については、そのプロパティーを参照してください。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="it">ha membro</rdfs:label>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+        <rdfs:label xml:lang="fr">possède un membre</rdfs:label>
+        <rdfs:label xml:lang="es">tiene miembro</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasPrimarySite -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPrimarySite">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasSite"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <rdfs:comment xml:lang="it">Indica la sede principale per l&apos;Organization. È da considerarsi come la sede di default in cui l&apos;Organization deve essere contattata pur non essendo necessariamente il quartier generale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique le site principal d&apos;une Organisation, le moyen par défaut par lequel l&apos;Organisation peut être contactée et pas nécessairement le siège social légal.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Oficina principal de la organización, la opción por defecto para ponerse en contacto con una organización, aunque no corresponde necesariamente con las oficinas centrales de la organización.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">組織の主要サイトを示します。組織の窓口となりえるデフォルトの手段ですが、正式な本部とは限りません。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="en">primary Site</rdfs:label>
+        <rdfs:label xml:lang="it">sede principale</rdfs:label>
+        <rdfs:label xml:lang="fr">site principal</rdfs:label>
+        <rdfs:label xml:lang="es">tiene sede principal en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasRegisteredSite -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasRegisteredSite">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasPrimarySite"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <rdfs:comment xml:lang="it">Indica la sede legale per l&apos;Organization. In molte giurisdizioni è richiesto che una FormalOrganization abbia una sede di questo tipo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the legally registered site for the organization, in many legal jurisdictions there is a requirement that FormalOrganizations such as Companies or Charities have such a primary designed site. </rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique l&apos;établissement principal légalement enregistré pour l&apos;Organisation. Dans de nombreuses juridictions existe l&apos;obligation pour une Organisation Formelle d&apos;avoir un tel site principal. </rdfs:comment>
+        <rdfs:comment xml:lang="es">Oficina o sede legalmente registrada de la organización. En muchas jurisdicciones legales existe el requisito de que organizaciones formales tales como empresas u organizaciones de beneficencia tengan una sede principal de este tipo.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">組織の法律上登録されたサイトを示し、多くの法的管轄区域では、会社や慈善団体などのFormalOrganizations（正式な組織）がそのような主要サイトを持っているという要件があります。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="en">registered Site</rdfs:label>
+        <rdfs:label xml:lang="it">sede legale</rdfs:label>
+        <rdfs:label xml:lang="fr">siège social</rdfs:label>
+        <rdfs:label xml:lang="es">tiene sede registrada en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasSite -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSite">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#siteOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <rdfs:comment xml:lang="it">Indica la sede in cui l&apos;Organization ha una qualche presenza anche in modo indiretto (ad esempio un ufficio virtuale). È l&apos;inverso di `org:siteOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a site at which the Organization has some presence even if only indirect (e.g. virtual office or a professional service which is acting as the registered address for a company). Inverse of `org:siteOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique un site sur lequel l&apos;Organisation possède une présence, même indirecte (domiciliation, boite postale). Inverse de `org:siteOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Lugar en donde la organización tiene algún tipo de presencia, incluso si es de forma indirecta (por ejemplo, una oficina virtual o servicio profesional que hagan la función de dirección registrada de la compañía). Es la relación inversa de `org:siteOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">組織が、間接（例えば、会社の登録住所として機能しているバーチャル・オフィスやプロフェッショナル・サービス）のみであったとしても、ある存在感を持っているサイトを示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="fr">a un site</rdfs:label>
+        <rdfs:label xml:lang="it">ha sede</rdfs:label>
+        <rdfs:label xml:lang="en">has site</rdfs:label>
+        <rdfs:label xml:lang="es">tiene sede en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasSubOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSubOrganization">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#subOrganizationOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="fr">Indique le statut de dépendance hiérarchique pour des Organisations ou des Unités Opérationnelles; indique une Organisation qui est une sous-partie ou une branche d&apos;une Organisation plus large. C&apos;est la propriété inverse de `org:subOrganizationOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Organización jerárquica de organizaciones o unidades. Indica que una organización es parte de otra organización más amplia o pertenece a ella. Es la relación inversa de `org:subOrganizationOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un contenimento gerarchico di una Organization o di una OrganizationalUnit. Indica una organizzazione che è parte di una organizzazione più grande. È l&apos;inverso di `org:subOrganizationOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents hierarchical containment of Organizations or Organizational Units; indicates an organization which is a sub-part or child of this organization.  Inverse of `org:subOrganizationOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">組織または組織単位の階層的包含を表わします。この組織のサブパートまたは子である組織を示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="fr">a une Sous-Organization</rdfs:label>
+        <rdfs:label xml:lang="it">ha sotto-Organization</rdfs:label>
+        <rdfs:label xml:lang="en">has SubOrganization</rdfs:label>
+        <rdfs:label xml:lang="es">tiene suborganización</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasSubOrganization"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#unitOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+        <rdfs:comment xml:lang="it">Indica un&apos;unità che è parte di questa Organization, come ad esempio un dipartimento facente parte di una più ampia FormalOrganization. È l&apos;inverso di `org:unitOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a unit which is part of this Organization, e.g. a Department within a larger FormalOrganization. Inverse of `org:unitOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique une Unité qui fait partie d&apos;une Organisation, par exemple un Départment au sein d&apos;une Organisation Formelle plus large. Inverse de `org:unitOf`.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Unidad que es parte de la organización, como, por ejemplo, un departamento incluido en una organización formal más amplia.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">例えば、より大きな組織内の部局など、この組織の一部である単位を示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="es">contiene unidad</rdfs:label>
+        <rdfs:label xml:lang="it">ha Unit</rdfs:label>
+        <rdfs:label xml:lang="en">has Unit</rdfs:label>
+        <rdfs:label xml:lang="fr">possède une Unité</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#headOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#headOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#memberOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="it">Indica che una persona è leader o responsabile formale di una Organization. Questo significa che la persona è alla radice del grafo (aciclico) creato dalle `org:reportsTo`, sebbene un&apos;organizzazione possa avere più di un responsabile.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that a person is the leader or formal head of the Organization. This will normally mean that they are the root of the `org:reportsTo` (acyclic) graph, though an organization may have more than one head.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique qu&apos;une personne est le directeur ou le responsable formel d&apos;une Organisation. Ceci indique souvent qu&apos;il est au sommet de du graphe acyclique des `org:reportsTo`, même si une organisation peut avoir plus d&apos;un responsable.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Persona que es jefe o jefa, representante ,,director o directora de la organización. Esto significa que dicha persona es el rango de la relación `org:reportsTo` en el organigrama de la organización (acíclico), aunque una organización puede tener más de un jefe.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">人（または他のエージェント）が組織のリーダーや正式なトップであることを示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="es">es director ejecutivo de</rdfs:label>
+        <rdfs:label xml:lang="en">head of</rdfs:label>
+        <rdfs:label xml:lang="it">responsabile di</rdfs:label>
+        <rdfs:label xml:lang="fr">responsable de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#heldBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#heldBy">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#holds"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Post"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="es">Agente que ocupa un puesto.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Indica un Agent che ricopre un Post.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indicate un Agent qui occupe le Poste.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates an Agent which holds a Post.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">ポストを保持するエージェントを示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="en">held by</rdfs:label>
+        <rdfs:label xml:lang="fr">occupé par</rdfs:label>
+        <rdfs:label xml:lang="es">ocupado por</rdfs:label>
+        <rdfs:label xml:lang="it">ricoperto da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#holds -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#holds">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Post"/>
+        <rdfs:comment xml:lang="it">Indica un Impiego ricoperto da un Agent.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indicate un Poste occupé par un Agent.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a Post held by some Agent.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Puesto ocupado por algún agente.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">あるエージェントによって保持されているポストを示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="en">holds</rdfs:label>
+        <rdfs:label xml:lang="fr">occupe</rdfs:label>
+        <rdfs:label xml:lang="es">ocupa</rdfs:label>
+        <rdfs:label xml:lang="it">ricopre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#linkedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#linkedTo">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="ja">2つの組織の任意の関係を示します。</rdfs:comment>
+        <rdfs:comment xml:lang="it">Indica una relazione arbitraria tra due organizzazioni. Ad esempio, specializzazioni di questa proprietà possono essere usate per denotare relazioni particolari tipo il finanziamento o la fornitura.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates an arbitrary relationship between two organizations. Specializations of this can be used to, for example, denote funding or supply chain relationships.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique une relation arbitraire entre deux Organisations. Des spécialisations peuvent être utilisées pour, par exemple, qualifier une relation de fournisseur ou de financeur.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relación arbitraria entre dos organizaciones. Las especializaciones de esta relación se pueden utilizar para denotar relaciones de financiación o suministro, entre otras.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="it">collegato a</rdfs:label>
+        <rdfs:label xml:lang="es">está relacionada con</rdfs:label>
+        <rdfs:label xml:lang="es">está relacionado con</rdfs:label>
+        <rdfs:label xml:lang="en">linked to</rdfs:label>
+        <rdfs:label xml:lang="fr">relié à</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#memberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberOf">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="it">Indica che una persona è membro di una Organization senza una precisa indicazione sulla natura di questa appartenenza e sul suo ruolo. Si noti che la scelta del nome di questa proprietà non intende limitarla alla sola  rappresentazione formalmente di un&apos;appartenenza. La proprietà può coprire anche altri coinvolgimenti nell&apos;organizzazione. Questa proprietà può essere specializzata per indicare ruoli all&apos;interno organizzazione o relazioni di diverse tipologie. Ha `org:hasmember` come proprietà inversa opzionale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that a person is a member of the Organization with no indication of the nature of that membership or the role played. Note that the choice of property name is not meant to limit the property to only formal membership arrangements, it is also indended to cover related concepts such as affilliation or other involvement in the organization. Extensions can specialize this relationship to indicate particular roles within the organization or more nuanced relationships to the organization. Has an optional inverse, `org:hasmember`.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique qu&apos;une personne est membre de l&apos;Organisation sans précision sur la nature de cet engagement ou du rôle joué. Notez que le choix du nom de cette propriété ne vise pas à la limiter aux seuls engagements formels, elle peut également couvrir des concepts reliés comme l&apos;affiliation ou le bénévolat. Des extensions peuvent spécialiser cette relation pour indiquer des rôles particuliers au sein de l&apos;Organisation or des relations plus nuancées avec elle. Possède une propriété inverse optionnelle, `org:hasmember`.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Persona que pertenece a la organización o es miembro de la misma, sin que conste la naturaleza de dicha pertenencia o el papel que desempeña. Se debe tener en cuenta que la elección de una denominación para esta propiedad no significa que la propiedad esté limitada a ciertos tipos de pertenencia formales, sino que pretende cubrir conceptos relacionados como el de afiliación u otras formas de participación en la organización. Se puede hacer uso de extensiones para especializar esta relación de forma que incluya tipos específicos de pertenencia a las organizaciones o relaciones especiales con la organización.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">エージェント（人または他の組織）が組織のメンバーであることを示します。ただし、その構成員の本質や担う役割は示しません。プロパティー名の選択は、プロパティーを正式な構成員配置のみに制限することが目的ではないことに注意してください。所属や組織へのその他の関与などの関連する概念をカバーすることも意図されています。拡張により、この関係を特殊化し、組織内の特定の役割やよりニュアンスを含んだ組織との関係を示すことができます。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="es">es miembro de</rdfs:label>
+        <rdfs:label xml:lang="en">member of</rdfs:label>
+        <rdfs:label xml:lang="fr">membre de</rdfs:label>
+        <rdfs:label xml:lang="it">membro di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#reportsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#reportsTo">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/org#Post"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/org#Post"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">Indica una relazione di subordinazione all&apos;interno dell&apos;organigramma. La semantica precisa può variare a seconda dell&apos;organizzazione, per esempio può essere usata per rappresentare la proprietà di supervisione oppure per le relazioni di rendicontazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a reporting relationship as might be depicted on an organizational chart. The precise semantics of the reporting relationship will vary by organization but is intended to encompass both direct supervisory relationships (e.g. carrying objective and salary setting authority) and more general reporting or accountability relationships (e.g. so called _dotted line_ reporting).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique une relation de subordination comme elle pourrait figurer dans un organigramme. La sémantique précise de cette subordination pourra varier selon l&apos;Organisation mais vise à englober aussi bien les relations hiérarchiques directes (définition d&apos;objectifs, montant du salaire) que des relations plus générales ou organisationnelles (les liens en pointillés dans les organigrammes).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relación de subordinación que se representa en los organigramas de las organizaciones. La semántica de la relación de subordinación varía según las organizaciones, pero su intención es abarcar tanto a las relaciones de supervisión directa (por ejemplo, aquellas en las que la autoridad determina los objetivos o el salario) como a las relaciones de subordinación más generales (por ejemplo, las llamadas líneas de autoridad o de mando (y responsabilidad) (http://www.promonegocios.net/organigramas/tipos-de-organigramas.html)).</rdfs:comment>
+        <rdfs:comment xml:lang="ja">組織図で描かれるかもしれないような上下関係を示します。エージェント間またはエージェントが就くことができるポスト間の上下関係を直接的に示すために使用できます。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="fr">est subordonné à</rdfs:label>
+        <rdfs:label xml:lang="en">reports to</rdfs:label>
+        <rdfs:label xml:lang="es">responde ante</rdfs:label>
+        <rdfs:label xml:lang="it">riporta a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#siteAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteAddress">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <rdfs:comment xml:lang="es">Dirección de la sede según una codificación adecuada. Se recomienda el uso de vCard (que utiliza el vocabulario en http://www.w3.org/TR/vcard-rdf/), pero el rango no se restringe únicamente al uso de este vocabulario sino que se permite el uso de otros códigos. La dirección puede constar de una dirección de correo electrónico, un número de teléfono o información de geo-localización, y no se limita a una dirección postal física.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Indica un indirizzo per la sede in una codifica appropriata. Il codominio è lasciato libero ma è consigliabile l&apos;uso del vocabolario vCard (http://www.w3.org/TR/vcard-rdf/). L&apos;indirizzo può includere email, numero di telefono e informazioni di geolocalizzazione e non è vincolato ad essere un indirizzo fisico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates an address for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. </rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique une adresse pour le site dans un encodage approprié. L&apos;usage du vocabulaire vCard ( http://www.w3.org/TR/vcard-rdf/) est encouragé, mais le range est ouvert pour permettre l&apos;utilisation d&apos;autres vocabulaires. L&apos;adresse peut comporter le courriel, le téléphone, et l&apos;information de géolocalisation; et n&apos;est donc pas seulement limitée à une adresse physique. </rdfs:comment>
+        <rdfs:comment xml:lang="ja">適切にコード化されたサイトのアドレスを示します。vCard[vcard-rdf]語彙などの有名なアドレスのコード化の使用が奨励されますが、他の符号化の使用を可能とするために値域はオープンのままにされます。アドレスには、電子メール、電話およびジオロケーション情報を含むことができ、物理的なアドレスに制限されません。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="fr">adresse du Site</rdfs:label>
+        <rdfs:label xml:lang="es">es la dirección de la sede</rdfs:label>
+        <rdfs:label xml:lang="it">indirizzo della sede</rdfs:label>
+        <rdfs:label xml:lang="en">site Address</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#siteOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="it">Indica un&apos;Organization che ha una qualche presenza nella data sede. È l&apos;inverso di `org:hasSite`.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates an Organization which has some presence at the given site. This is the inverse of `org:hasSite`.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique une Organisation qui a une présence sur le site en question. Inverse de `org:hasSite`.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Organización que tiene ubicación en un lugar. Es la relación inversa de `org:hasSite`.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">あるサイトである存在感を持っている組織を示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="es">es sede de</rdfs:label>
+        <rdfs:label xml:lang="it">sede di</rdfs:label>
+        <rdfs:label xml:lang="en">site Of</rdfs:label>
+        <rdfs:label xml:lang="fr">site de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#subOrganizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#subOrganizationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#transitiveSubOrganizationOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="es">Distribución jerárquica de organizaciones o unidades. Indica que una organización contiene a otra organización. Es la relación inversa de `org:hasSubOrganization`</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rappresenta un contenimento gerarchico di una Organization o di una OrganizationalUnit. È l&apos;inverso di `org:hasSubOrganization`. Ha nome come nome alternativo hasSubOrg.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization. Inverse of `org:hasSubOrganization`.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Représente une relation hierarchique des Organisations ou des Unités Opérationnelles; indique une Organisation sujet qui contient cette Organisation. Inverse de `org:hasSubOrganization`.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">組織または組織単位の階層的包含を表わします。この組織を含む組織を示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="es">es suborganización de</rdfs:label>
+        <rdfs:label xml:lang="it">sotto-Organization di</rdfs:label>
+        <rdfs:label xml:lang="fr">sous-Organization de</rdfs:label>
+        <rdfs:label xml:lang="en">subOrganization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#transitiveSubOrganizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#transitiveSubOrganizationOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="fr">La version transitive de la propriété subOrganizationOf, renvoie une représentation de toutes les organisations qui contiennent celle-ci. Notez que ceci est une super-propriété de la relation transitive donc elle pourrait contenir des assertions additionnelles mais cet usage n&apos;est pas recommandé.</rdfs:comment>
+        <rdfs:comment xml:lang="es">La versión transitiva de la propiedad “subOrganizationOf”, es decir, la representación de todas las organizaciones en las que esta está contenida. Téngase en cuenta que desde el punto de vista técnico esta es una propiedad que contiene a todas las propiedades transitivas, de forma que podría contener afirmaciones adicionales, aunque su uso no está aconsejado.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The transitive closure of subOrganizationOf, giving a representation of all organizations that contain this one. Note that technically this is a super property of the transitive closure so it could contain additional assertions but such usage is discouraged.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">subOrganizationOfの推移閉包で、これを含むすべての組織の表現を与える。技術的に、これが推移閉包のスーパープロパティーであるため、追加の言明を含むことができますが、そのような使用法はお勧めできないことに注意してください。</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la chiusura transitiva di subOrganizationOf, quindi rappresenta tutte le organizzazioni che la contengono. Tecnicamente, essendo una chiusura transitiva, può contenere asserzioni che non la riguardano e quindi il suo uso è sconsigliato.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="es">es suborganización de (transitiva)</rdfs:label>
+        <rdfs:label xml:lang="es">es suborganización de manera transitiva de</rdfs:label>
+        <rdfs:label xml:lang="it">sotto-Organization transitiva</rdfs:label>
+        <rdfs:label xml:lang="fr">sous-Organization transitive de</rdfs:label>
+        <rdfs:label xml:lang="en">transitive sub-organization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#unitOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#unitOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#subOrganizationOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:comment xml:lang="it">Indica un Organization di cui questa Unit fa parte, come ad esempio un dipartimento all&apos;interno di una più vasta FormalOrganization. È l&apos;inverso di `org:hasUnit`.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates an Organization of which this Unit is a part, e.g. a Department within a larger FormalOrganization. This is the inverse of `org:hasUnit`.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Indique l&apos;Organisation dont cette Organisation ou Unité fait partie, par exemple un Départment au sein d&apos;une Organisation Formelle plus large. Inverse de `org:hasUnit`.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Organización de la que es parte esta unidad, por ejemplo, un departamento incluido en una organización formal más amplia.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">例えば、より大きな組織内の部局など、この単位がその一部分である組織を示します。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="es">es unidad de</rdfs:label>
+        <rdfs:label xml:lang="en">unit Of</rdfs:label>
+        <rdfs:label xml:lang="it">unità di</rdfs:label>
+        <rdfs:label xml:lang="fr">unité de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/member_of_a_group -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/member_of_a_group">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>Indicates a member of a Group</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>member of a group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/pslo.owl#battery -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_charge -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_charge">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Charge level of the battery.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_date -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_date">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date of manufacturing of the battery.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_exchange -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_exchange"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_exchange_new_battery -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_exchange_new_battery">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery_exchange"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery_exchange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Battery that is integrated to the car after performing the service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_exchange_old_battery -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_exchange_old_battery">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery_exchange"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery_exchange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Battery that was integrated in the car before performing the service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_recycling -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_recycling"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_recycling_battery_recycled -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_recycling_battery_recycled">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Battery that has been recycled by the service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_recycling_battery_type -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_recycling_battery_type">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment> Type of the battery that has been recycled by the service. Three types 60, 85 and p85.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_recycling_center -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_recycling_center">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_recycling_client -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_recycling_client">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery_recycling"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Client that used the service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_type -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_type">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Three types of batteries: 60, 85 and p85</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_wear -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#battery_wear">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Represents the wear level of the battery and therefore its performance. When the battery is bought, this level is at 100 and then decreases slowly when the battery gets older.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#center -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#center"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#center_city -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#center_city">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#center"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery_recycling_center"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#battery_store_center"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#maintenance_center"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>City were the center is.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#mainteance -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#mainteance"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_battery -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#maintenance_battery">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#mainteance"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#maintenance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Battery on which the maintenance has been performed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_center -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#maintenance_center">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#mainteance"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#maintenance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_client -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#maintenance_client">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#mainteance"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#maintenance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Client that used the service</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_problem -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#maintenance_problem">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#mainteance"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#maintenance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Three types of  problems can be detected: &quot;motor&quot;, &quot;electronic system&quot; and &quot;suspension&quot;. Those three problems can be combined. We suppose the problems fixed after the maintenance.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_result -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#maintenance_result">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#mainteance"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#maintenance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Final result of the maintenance. Two types of result: &quot;ok&quot; or &quot;problem&quot;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_structure -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#maintenance_structure">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#mainteance"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#maintenance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Structure on which the maintenance has been performed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_technician -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#maintenance_technician">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#mainteance"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#maintenance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Technician who performed the maintenance.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#private -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#private"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#private_city -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#private_city">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#private"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#private"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>City where the private lives.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#private_contract -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#private_contract">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#private"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#private"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Gives the type of contract the client chose when he bought his car. This contract can be “normal” or “special”. A “normal” contract means he uses the services when he wishes and a “special” contract means he is offered some services at given period of time. Those services are, for example, the replacement of the old battery for a new one after 3 years from purchase (i.e. “battery_exchange” service). To simplify the model and since it’s not the most interesting thing to consider, all the clients have “special” contracts.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#private_mail -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#private_mail">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#private"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#private"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Email address of the private.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#private_name -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#private_name">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#private"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#private"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the private.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#service -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#service"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#service_date -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#service_date">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#service"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date of when the service has been performed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#software_update -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#software_update"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#software_update_client -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#software_update_client">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#software_update"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#software_update"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Client that used the service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#software_update_new_os -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#software_update_new_os">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#software_update"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#software_update"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Software that is used in the case after performing the update.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#software_update_previous_os -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#software_update_previous_os">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#software_update"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#software_update"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Software that was used in the case before performing the update.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#software_update_structure -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#software_update_structure">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#software_update"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#software_update"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Structure that has been updated.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#structure -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#structure"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#structure_check -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#structure_check">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Gives an insight of the well-working of the structure by checking its different components.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#structure_date -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#structure_date">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date of manufacturing of the structure.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#structure_drive_system -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#structure_drive_system">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Two types of drive system: all-wheel drive and rear wheel drive.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#structure_model -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#structure_model">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Two models of structures: model_s and roadster.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/pslo.owl#structure_software -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/pslo.owl#structure_software">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:domain rdf:resource="http://example.org/pslo.owl#structure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Software used in the structure.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/pslo#EOL_service -->
+
+    <owl:Class rdf:about="http://example.org/pslo#EOL_service">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo#P_List -->
+
+    <owl:Class rdf:about="http://example.org/pslo#P_List">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#battery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo#Service -->
+
+    <owl:Class rdf:about="http://example.org/pslo#Service"/>
+    
+
+
+    <!-- http://example.org/pslo#schema:Product -->
+
+    <owl:Class rdf:about="http://example.org/pslo#schema:Product"/>
+    
+
+
+    <!-- http://example.org/pslo.owl#Battery_Drawback -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#Battery_Drawback">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#Decommissioning -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#Decommissioning">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#Service_Lifecycle_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#Future_Contact -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#Future_Contact">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#client"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#OrganizationService -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#OrganizationService">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo#Service"/>
+        <rdfs:comment>Four services are avaible for the client and his car: a battery exchange service, a battery recycling service, a maintenance service and software updates.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#Provisioning -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#Provisioning">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#Service_Lifecycle_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#Service_Design -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#Service_Design">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#Service_Lifecycle_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#Service_Lifecycle_Phase -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#Service_Lifecycle_Phase">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#Service_Offering -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#Service_Offering">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#Service_Lifecycle_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#Service_Usage -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#Service_Usage">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#Service_Lifecycle_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#battery">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_exchange -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#battery_exchange">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_recycling -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#battery_recycling">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_recycling_center -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#battery_recycling_center">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_recycling_center_technician -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#battery_recycling_center_technician">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Post"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#battery_store_center -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#battery_store_center">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#car -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#car">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Vehicle"/>
+        <rdfs:comment>The car is split into two parts, the structure and the battery, with their own caracteristics.
+The car remains linked to the same structure during it&apos;s lifetime but the battery or the owner of the car can change.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#client -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#client">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#maintenance">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+        <rdfs:comment>We assume a maintenance is performed every year from the date of purchase. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_center -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#maintenance_center">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#maintenance_center_technician -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#maintenance_center_technician">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Post"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#private -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#private">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#client"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#product_provider -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#product_provider">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#service_provider -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#service_provider">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#software_update -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#software_update">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#OrganizationService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/pslo.owl#structure -->
+
+    <owl:Class rdf:about="http://example.org/pslo.owl#structure">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo.owl#car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#BusinessEntity -->
+
+    <owl:Class rdf:about="http://purl.org/goodrelations/v1#BusinessEntity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Vehicle -->
+
+    <owl:Class rdf:about="http://schema.org/Vehicle">
+        <rdfs:subClassOf rdf:resource="http://example.org/pslo#schema:Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#FormalOrganization -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="en">An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. Examples include a Corporation, Charity, Government or Church. Note that this is a super class of `gr:BusinessEntity` and it is recommended to use the GoodRelations vocabulary to denote Business classifications such as DUNS or NAICS.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Organización reconocida a nivel mundial, en particular en jurisdicciones legales, con derechos y responsabilidades asociadas. Algunos ejemplos son: organización corporativa, organización benéfica, organización gubernamental, organización religiosa. Se debe tener en cuenta que ésta es una superclase de `gr:BusinessEntity` y que se recomienda el uso del vocabulario GoodRelations para referirse a clasificaciones de negocios tales como DUNS o NAICS.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un&apos;organizzazione che è riconosciuta a livello mondiale o, in generale, all&apos;interno di una qualche giurisdizione, e che quindi possiede diritti e responsabilità. Ad esempio aziende, enti governativi, associazioni di volontariato. Si noti che questa è una superclasse di `gr:BusinessEntity` e che quindi è raccomandabile usare il vocabolario GoodRelations per esprimere classificazioni di tipo industriale e commerciale come DUNS e NAICS.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une Organisation reconnue, en particulier par les juridictions locales, ayant des droits et des responsabilités. Exemples : entreprises, association à but non-lucratif, collectivité, église. Notez que c&apos;est une super-classe de `gr:BusinessEntity` et qu&apos;il est recommandé d&apos;utiliser le vocabulaire GoodRelations pour indiquer les classifications économiques comme le code NACE.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">関連する権利と責任を有する（特に法的管轄区域において）世界中に広く認識されている組織。例には、企業、慈善団体、政府や教会が含まれます。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="fr">Organisation Formelle</rdfs:label>
+        <rdfs:label xml:lang="it">Organizzazione formale</rdfs:label>
+        <rdfs:label xml:lang="en">org:Formal Organization</rdfs:label>
+        <rdfs:label xml:lang="es">organización formal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#OrganizationalUnit -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="en">An Organization such as a University Support Unit which is part of some larger FormalOrganization and only has full recognition within the context of that FormalOrganization, it is not a Legal Entity in its own right. Units can be large and complex containing other Units and even FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_</rdfs:comment>
+        <rdfs:comment xml:lang="es">Organización que forma parte de una organización formal más amplia, como el servicio de informática o centro de cálculo de una universidad, y que sólo tiene reconocimiento pleno en el contexto de dicha organización formal, pero que no es una entidad legal propiamente dicha. Estas unidades pueden ser amplias y complejas, e incluir a otras unidades o incluso a otras organizaciones formales. Denominaciones alternativas: departamento.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un&apos;organizzazione come ad esempio l&apos;unità dei sistemi informativi che è parte di una più grande FormalOrganization e che, pur essendo riconosciuta nel contesto della propria organizzazione di riferimento, non è legalmente riconosciuta come entità a sé stante. Le unità possono essere ampie e complesse e contenere al loro interno sia altre unità che addirittura FormalOrganization.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une organisation telle que le support informatique d&apos;une université, qui fait partie d&apos;une Organisation Formelle plus importante et qui ne peut être reconnue qu&apos;en tant que membre de cette organisation supérieure, ce n&apos;est pas une entité légale en elle-même. Les unités opérationnelles peuvent être étendues, complexes et inclure elles-mêmes d&apos;autres branches ou Unités Opérationnelles, voire des Organisations Formelles.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">あるより大きな組織の一部であり、その組織の中においてのみ完全に認識される部局や支援部署などの組織です。特に、その単位はそれ自体では法的実体と見なされません。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="it">Unità Organizzativa</rdfs:label>
+        <rdfs:label xml:lang="fr">Unité opérationnelle</rdfs:label>
+        <rdfs:label xml:lang="en">org:OrganizationalUnit</rdfs:label>
+        <rdfs:label xml:lang="es">unidad organizativa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Post -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Post">
+        <rdfs:comment xml:lang="en">A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Puesto o posición que representa algún tipo de empleo dentro de una organización, que existe independientemente de la persona o personas que lo desempeñan. Esta clase puede utilizarse para representar situaciones en las que una persona es miembro de una organización ex oficio (por ejemplo, el Secretario de Estado escocés es parte del Gabinete del gobierno británico por virtud de ser Secretario de Estado en Escocia, y no como individuo). Un puesto puede ser desempeñado por múltiples individuos y de aquí que sea tratado como una organización en sí misma.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un Impiego rappresenta una posizione all&apos;interno dell&apos;organizzazione che esiste indipendentemente dalla persona che la ricopre. Gli impieghi possono essere utilizzati per le situazioni in cui una persona è membro di un&apos;organizzazione o di un ufficio (ad esempio un segretario di stato). Un Impiego può essere ricoperto da più persone.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un Poste représente une position au sein d&apos;une Organisation qui existe indépendamment de la personne ou des personnes qui le remplissent. Les postes peuvent être utilisés pour représenter des situations où une personne est membre d&apos;une Organisation d&apos;office (par exemple, le Secrétaire d&apos;Etat pour l&apos;Ecosse fait partie du Cabinet du Royaume-Uni du fait d&apos;être Secrétaire d&apos;Etat pour l&apos;Ecosse, non pas comme une personne physique). Un poste après peut être occupé par plusieurs personnes et peut donc être considéré comme une Organisation à part entière.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">ポストは、それを埋める人（人々）とは無関係に存在する組織内のある位置を表わします。ポストは、人が職権上、組織のメンバーである状況を表わすために使用できます（例えば、スコットランド大臣は、個人としてではなく、スコットランド大臣であることにより、英国内閣の一部です）。ポストは、複数の人々によって保持されることが可能だあるため、それ自体を組織として扱うことができます。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="it">Impiego</rdfs:label>
+        <rdfs:label xml:lang="fr">Poste</rdfs:label>
+        <rdfs:label xml:lang="en">org:Post</rdfs:label>
+        <rdfs:label xml:lang="es">puesto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Role -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Role">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+        <rdfs:label xml:lang="it">Ruolo</rdfs:label>
+        <rdfs:label xml:lang="fr">Rôle</rdfs:label>
+        <rdfs:label xml:lang="es">actividad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Site -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Site">
+        <rdfs:comment xml:lang="en">An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don&apos;t exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Oficina, local o cualquier otro lugar en el que se encuentra una organización. Muchas organizaciones están distribuidas en varias sedes, que a su vez están repartidas en distintas ubicaciones. En muchos casos una sede será un sitio o local físico. Sin embargo, no se excluye la posibilidad de lugares no físicos como oficinas virtuales con los correspondientes apartados de correo y servicio de atención telefónica. Se pueden añadir más subtipos mediante extensiones para incluir tipos especiales de lugares.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un ufficio o altra sede dovei l&apos;organizzazione è situata. Molte organizzazione sono distribuite su più sedi e molte sedi ospitano più ubicazioni. Nella maggior parte dei casi un Site è una locazione fisica. Non si esclude la possibilità di indicare sedi non fisiche come ad esempio gli uffici virtuali. Le estensioni dell&apos;ontologia potrebbero usare delle sottoclassi per rappresentare i tipi particolari di sede.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un établissement ou tout autre lieu dans lequel une Organisation est localisé. Beaucoup d&apos;organisations sont dispersées à travers plusieurs sites. Dans la plupart des cas un Site sera un lieu physique. Toutefois, nous n&apos;excluons pas la possibilité de sites non-physiques comme un bureau virtuel avec une boîte postale et un service de secrétariat mutualisé. Des extensions pourraient fournir des sous-classes pour décrire des types de sites particuliers.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">組織が位置するオフィスやその他の敷地。多くの組織が複数のサイトに散在しており、多くのサイトが多数の場所を持つでしょう。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label xml:lang="it">Sede</rdfs:label>
+        <rdfs:label xml:lang="fr">Site</rdfs:label>
+        <rdfs:label xml:lang="en">org:Site</rdfs:label>
+        <rdfs:label xml:lang="es">sede</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment>An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+        <rdfs:label>foaf:Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>A class of Agents.</rdfs:comment>
+        <rdfs:label>foaf:Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:comment>A person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>foaf:Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Project -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.org/pslo.owl#battery_exchange">
+        <rdfs:comment>We assume the client exchange his old battery for a new battery every three years. The exchange take place in a maintenance center before a complete maintenance check.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/pslo.owl#battery_recycling">
+        <rdfs:comment>We assume the client take a new battery every three years and recycle his old one.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/pslo.owl#battery_recycling_center">
+        <rdfs:comment>Center where the service has been performed</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/pslo.owl#maintenance_center">
+        <rdfs:comment>Center where the maintenance has been performed.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/pslo.owl#software_update">
+        <rdfs:comment>A software update is offer to the client every now and then by the car manufacturer. Since it is not mandatory , the client can choose to install it or not. Therefore, some clients will stick to an old version of the software of the car/structure.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#client">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#l">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://example.org/pslo.owl#inDecommision"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#l"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://example.org/pslo.owl#performed_on"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#s"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://example.org/pslo.owl#owned_by"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/pslo.owl#Future_Contact"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://example.org/pslo#P_List"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://example.org/pslo.owl#battery_wear"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="urn:swrl#y"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://example.org/pslo.owl#battery_date"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#d"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl#d"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-09-24T06:00:00Z</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/pslo.owl#Battery_Drawback"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/pslo.owl#Battery_Drawback"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://example.org/pslo.owl#composed_by"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://example.org/pslo.owl#own"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#client"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/pslo.owl#Future_Contact"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#client"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
